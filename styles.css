@@ -1,0 +1,200 @@
+/* variables */
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* base styles */
+body {
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    color: var(--very-dark-magenta);
+}
+
+p.description {
+    color: var(--dark-grayish-magenta);
+}
+.stars-reviews, .stars-report-guru, .stars-besttech {
+    background: var(--light-grayish-magenta);
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    line-height: 2.0;
+    font-weight: bold;
+    color: var(--very-dark-magenta);
+}
+
+.review-one, .review-two, .review-three {
+    background: var(--very-dark-magenta);
+    margin: 15px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.buyer-photo {
+    display: flex;
+    margin-left: -15px;
+    margin-top: -10px;
+}
+
+.buyer-photo img {
+    border-radius: 50%;
+    transform: scale(0.6);
+}
+
+.buyer-info {
+    margin-top: 20px;
+    line-height: 1.5;
+    margin-left: 10px;
+}
+
+p.buyer {
+    color: var(--white);
+    font-weight: 700;
+}
+
+p.status {
+    color: var(--soft-pink);
+}
+
+p.testimonial {
+    color: var(--white);
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+/* mobile styles */
+@media only screen and (min-width: 375px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
+        background-position: left top, bottom right;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    h1, .description, .awards {
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0 20px;
+    }
+
+    p.description {
+        margin: 20px 15px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        margin: 12%;
+        background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
+        background-position: left top, bottom right;
+        background-repeat: no-repeat, no-repeat;
+        align-items:center;
+    }
+
+    .hero-header {
+        display: flex;
+
+    }
+
+    .header, .awards {
+        width: 50%;
+    }
+
+    
+    div.header h1, p.description {
+        text-align: start;
+    }
+   
+
+    div.header h1 {
+        font-size: 40px;
+    }
+
+    p.description {
+        line-height: 1.5;
+    }
+
+    .awards {
+        margin-left: -60px;
+        transform: scale(0.9);
+    }
+    .stars-reviews, .stars-report-guru, .stars-besttech, .reviews {
+        display: flex;
+    }
+    
+    .stars-reviews, .stars-report-guru, .stars-besttech {
+        margin: 0 0 15px 0;
+        padding: 17px 0;
+        gap: 30px;
+        justify-content: center;
+        width: 100%;
+        transform: scale(0.9);
+
+    }
+
+    .stars-report-guru {
+        margin-left: 12%;
+    }
+
+    .stars-besttech {
+        margin-left: 25%;
+    }
+
+    .reviews {
+        margin-top: 45px;
+        gap: 20px;
+    }
+
+    .review-one, .review-two, .review-three {
+        margin: 0;
+        height: fit-content;
+        border-radius: 5px;
+        padding: 10px 25px 30px 20px;
+    }
+
+    .review-two {
+        margin-top: 10px;
+    }
+
+    .review-three {
+        margin-top: 20px;
+    }
+
+    p.testimonial {
+        line-height: 1.4;
+        font-size: small;
+
+    }
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
